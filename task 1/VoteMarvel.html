@@ -1,0 +1,80 @@
+<html>
+<title>Vote Your Hero</title>
+<style>
+body{
+		background:linear-gradient(to bottom,white,yellow,orange)
+	}
+	.topnav{
+		background-color:orange;
+		overflow:hidden;
+		}
+	.topnav a{
+		float:left;
+		color:#000000;
+		text-align:center;
+		padding:14px 16px;
+		text-decoration:none;
+		font-size:17px
+		}
+	.topnav a.active{
+		background-color:purple;
+		color:white;
+	}
+</style>
+
+<div class="topnav">
+	<a 
+	href="MainPage.html">HOME</a>
+	<a 
+	href="History.html">HISTORY</a>		
+	<a class="active"
+	href="VoteMarvel.html">VOTE FOR YOUR MARVEL SUPERHERO</a>
+	<a 
+	href="AboutUs.html">CREDITS</a>
+</div>
+
+<head>
+<script>
+function getvote(int){
+if(window.XMLHttpRequest){
+		xmlhttp=new
+		XMLHttpRequest();
+	}
+
+	xmlhttp.onreadystatechange=function(){
+		if(this.readyState==4 && this.status==200){
+			document.getElementById("poll").innerHTML=
+			this.responseText;
+			}
+		}
+		xmlhttp.open("GET","poll_vote.php?vote="+int,true);
+		xmlhttp.send();
+	}
+</script>
+</head>
+<body>
+<div id="poll">
+<h2>Cast your Vote Here</h2>
+<form>
+Black Panther:
+<input type="radio" name="vote" value="0" onclick="getvote(this.value)"><br/>Black Widow:
+<input type="radio" name="vote" value="1" onclick="getvote(this.value)"><br/>Captain America:
+<input type="radio" name="vote" value="2" onclick="getvote(this.value)"><br/>Deadpool:
+<input type="radio" name="vote" value="3" onclick="getvote(this.value)"><br/>Drax:
+<input type="radio" name="vote" value="4" onclick="getvote(this.value)"><br/>Gamora:
+<input type="radio" name="vote" value="5" onclick="getvote(this.value)"><br/>Groot:
+<input type="radio" name="vote" value="6" onclick="getvote(this.value)"><br/>Hulk:
+<input type="radio" name="vote" value="7" onclick="getvote(this.value)"><br/>Iron Man:
+<input type="radio" name="vote" value="8" onclick="getvote(this.value)"><br/>Mantis:
+<input type="radio" name="vote" value="9" onclick="getvote(this.value)"><br/>Rocket:
+<input type="radio" name="vote" value="10" onclick="getvote(this.value)"><br/>Spider Man:
+<input type="radio" name="vote" value="11" onclick="getvote(this.value)"><br/>StarLord:
+<input type="radio" name="vote" value="12" onclick="getvote(this.value)"><br/>Thor:
+<input type="radio" name="vote" value="13" onclick="getvote(this.value)"><br/>Wolverine:
+<input type="radio" name="vote" value="14" onclick="getvote(this.value)"><br/>My Superhero isn't here...I'm out:
+<input type="radio" name="vote" value="15" onclick="getvote(this.value)">
+
+</form>
+</div>
+</body>
+</html>
