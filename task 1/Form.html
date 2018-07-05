@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>MARVEL Fan Page</title>
+	</head>
+	<style>
+	body{
+		background:black
+	}
+	.topnav{
+		background-color:yellow;
+		overflow:hidden;
+		}
+	.topnav a{
+		float:left;
+		color:#000000;
+		text-align:center;
+		padding:14px 16px;
+		text-decoration:none;
+		font-size:17px
+		}
+	.topnav a.active{
+		background-color:red;
+		color:white;
+	}
+	.texts{
+		color:white;
+	}
+
+	</style>
+			
+		<div class="topnav">
+			<a
+			href="index.html">HOME</a>
+			<a 
+			href="Trailers.html">TRAILERS</a>
+			<a 
+			href="KnowMarvel.html">KNOW YOUR MARVEL SUPERHERO</a>
+			<a class="active"
+			href="Form.html">JOIN THE CLUB</a>
+			<a 
+			href="AboutUs.html">CREDITS</a>
+		</div>
+		
+		<div class="texts">
+			<h2 align="middle">Join the MARVEL Fan Club </h2>
+			
+			<form style="margin-left:20px;font-size:120%" action="mailto:arjungopinath06@gmail.com" 
+			method="post" enctype="text/plain">
+			
+			<br/>First Name:<br/>
+			<input type="text" name="fname" value="First Name"><br/>
+			<br/>Last Name:<br/>
+			<input type="text" name="lname" value="Last Name"><br/>
+			<br/>Gender:<br/>
+			<select>
+			<option value="default" name="gender">__Select an Option__</option>
+			<option value="others" name="gender">Others</option>
+			<option value="male" name="gender">Male</option>
+			<option value="female" name="gender">Female</option>
+			</select><br/>
+			<br/>E-mail id:<br/>
+			<input type="text" name="email" value="Email id"><br/>
+			<br/><input type="submit" value="Join the Club">
+			</form>
+		</div>
