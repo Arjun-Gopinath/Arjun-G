@@ -1,38 +1,68 @@
 <html>
 <title>Main Page</title>
 <style>
-header{
-	background-image:url("images.jpg");
+img{
+	position:relative;
 	background-repeat:no-repeat;
 	background-size:cover;
 	height:100%;
-	
-	margin-bottom:10px;
-	border-bottom:solid;
-	border-radius:5px;
-	border-color:black;
+	opacity:0.75;
 }
 
 header p{
-	font-size:50px;
-	font-family:Times-New-Roman;
+	position:absolute;
+	text-align:right;
+	right:5px;
+	top:0px;
+	margin:0px;
+	padding:0px;
+	font-size:100px;
+	font-family:Bookman;
 	font-weight:bold;
 	text-shadow:2px 5px 5px black;
-	text-align:right;
-	padding:2px 8px;
-	color:white;
-	
+	color:black;
+}
 
+.desc h1{
+	font-size:100px;
+	font-family:georgia;
+	color:white;
+	position:absolute;
+	font-style:italic;
+	bottom:20px;
+	left:6px;
+}
+
+.desc h2{
+	font-size:150%;
+	font-family:georgia;
+	color:black;
+	position:absolute;
+	bottom:0px;
+	left:30px;
+}
+
+.topnav{
+	display:block;
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	padding:2px 2px;
+	margin:15px;
+	text-decoration:none;
+}
+
+.topnav img{
+	height:60px;
+	width:60px;
+	opacity:1;
+	border-radius:50%;
 }
 
 .dropdown img{
 	height:50px;
 	width:50px;
-}
-
-body{
-	background-color:white;
-	font-family:Arial;
+	opacity:1;
 }
 
 .dropdown{
@@ -54,10 +84,8 @@ body{
 .dropdown-content{
 	display:none;
 	position:absolute;
-	background-color:#333399;
-	min-width:100px;
-	text-align:left;
-	border-radius:12px;
+	background-color:#bdbdbd;
+	min-width:500px;
 	padding:14px 16px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,2);
 	z-index:1;
@@ -65,61 +93,59 @@ body{
 
 .dropdown:hover .dropdown-content{
 	display:block;
+	background:linear-gradient(to top left,black,gray,black);
 }
 
 .dropdown-content a{
 	display:block;
 	color:white;
-	border-radius:12px;
-	text-align:center;
+	font-size:20px;
+	text-align:left;
 	padding:14px 16px;
 	text-decoration:none;
 }
 
 .dropdown-content a:hover{
-	background-color:white;
-	color:black;
+	color:orange;
 }
 
 div.Contact{
 	box-shadow:0 4px 8px 0 rgba(0,0,0,2),0 6px 20px 0 rgba(0,0,0,0.19);
 	margin:auto;
-	width:85%;
+	background-image:url("ford.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.Contact h1{
+	color:white;
+	padding:14px 16px;
+	font-family:garamond;
+	font-size:80px;
+	text-align:center;
+}
+
+.Contact h2{
+	color:white;
+	font-family:garamond;
+	padding:14px 16px;
+	font-size:30px;
+	text-align:center;
 }
 
 .mail{
 	color:black;
-	width:100%;
 	border-radius:10px;
 	text-align:center;
 	min-height:160px;
-	border-radius:20px;
-}
-
-h2{
-	color:#0000ff;
-	font-family:verdana;
-	padding:14px 16px;
-	font-size:175%;
-	text-shadow:2px 2px 2px #e6e6e6;
-	text-align:center;
-}
-
-h1{
-	color:#0000ff;
-	padding:14px 16px;
-	font-family:verdana;
-	font-size:270%;
-	text-shadow:2px 2px 2px #e6e6e6;
-	text-align:center;
 }
 
 input{
 	border-radius:5px;
 	min-width:80px;
 	min-height:30px;
-	margin:10px;
-	padding:10px;
+	margin:20px;
+	padding:20px;
 }
 
 .submit{
@@ -127,7 +153,7 @@ input{
 	color:white;
 	font-family:verdana;
 	border-color:white;
-	border-radius:20px;
+	border-radius:30px;
 	font-size:20px;
 	padding:10px;
 }
@@ -147,34 +173,44 @@ form{
 }
 
 </style>
-<body>
+<body id="top">
+<img src="images.jpg">
+<header><p>FORD<p>
+</header>
 
-<header id="topbar"><p>FORD<p></header>
-
+	<div class="desc"><h1>Raw Power Beckoning....</h1>
+	<h2>The All New Ford Mustang GT</h2></div> 
+	
 	<div class="dropdown">
 	<span><img src="navicon.png"></span>
 		<div class="dropdown-content">
-			<a href="#topbar">HOME</a>
-			<a href="#"></a>
+			<a href="#gallery">GALLERY</a>
+			<a href="#team">TEAM</a>
 			<a href="#Contact">CONTACT US</a>
 		</div>
 	</div>
 	
+	<div class="topnav"><a href="#top"><img src="topicon.jpg"></a></div>
+
+<div class="Team">
+	<h1 id="Team">Team</h1>
+
+</div>
+
 <div class="Contact">
 
-<h1 id="Contact"></h1>
+<h1 id="Contact">Contact</h1>
+<h2 style="background-color:black;">We'd love to help you out. Feel free to say hello!!!</h2>
 
 <div class="mail">
+	
 	<form action="mailto:arjungopinath06@gmail.com" 
 		method="post" enctype="text/plain">
 		
-		<br/>First Name:<br/>
 		<input type="text" name="fname" value="First Name"><br/>
-		<br/>Last Name:<br/>
 		<input type="text" name="lname" value="Last Name"><br/>
-		<br/>E-mail id:<br/>
 		<input type="text" name="email" value="Email id"><br/>
-		<br/>Enter Response:<br/>
+		<input type="text" name="email" value="Phone"><br/>
 		<input type="text" name="response" 
 		value="Enter response here..."><br/>
 		
@@ -182,7 +218,7 @@ form{
 	
 	</form>
 </div>
-
+</div>
 <div class="credits">
 	
 </div>
