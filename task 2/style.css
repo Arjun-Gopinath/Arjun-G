@@ -93,13 +93,13 @@ div.testdrive{
 }
 
 .testdrive h1{
-	font-family:arial;
+	font-family:garamond;
 	font-size:50px;
 	color:black;
 	padding:1px;
 }
 .testdrive p{
-	font-family:arial;
+	font-family:garamond;
 	font-size:30px;
 	color:black;
 	padding:1px;
@@ -157,12 +157,12 @@ div.Team{
 	width:auto;
 	background-size:cover;
 	height:auto;
-	background:linear-gradient(to top left,#3a1c71,#ffaf7b);
+	background:linear-gradient(to top left,#74ebd5, #acb6e5);
 	
 }
 
 .Team p{
-	font-family:arial;
+	font-family:garamond;
 	padding-top:10px;
 	font-size:50px;
 	text-align:center;
@@ -170,7 +170,7 @@ div.Team{
 .Team h2{
 	text-align:center;
 	font-size:30px;
-	font-family:arial;
+	font-family:garamond;
 }	
 
 .column {
@@ -269,7 +269,7 @@ input{
 .submit{
 	background-color:black;
 	color:white;
-	font-family:verdana;
+	font-family:garamond;
 	border-color:white;
 	border-radius:30px;
 	font-size:20px;
@@ -283,7 +283,7 @@ input{
 
 
 p{
-	font-family:Arial;
+	font-family:garamond;
 }
 
 form{
