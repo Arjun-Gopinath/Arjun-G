@@ -1,0 +1,292 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+	opacity:1;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #007CFF
+}
+.menu-right {
+  float: right;
+  margin-right:10px;
+}
+
+body{
+	background:linear-gradient(to bottom right,black,gray,black)
+}
+.main{
+	background-image:url("images.jpg");
+	height:auto;
+	width:100%;
+	bottom:0px;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+.des h1{
+	font-size:100px;
+	padding-top:10%;
+	font-family:georgia;
+	color:black;
+	font-style:italic;
+	left:16px;
+}
+
+.des h2{
+	font-size:30px;
+	font-family:georgia;
+	color:white;
+	bottom:0px;
+	left:30px;
+}
+
+.topnav{
+	position:fixed;
+	bottom:0px;
+	right:0px;
+	padding:2px 2px;
+	margin:15px;
+	text-decoration:none;
+}
+
+.topnav img{
+	height:60px;
+	width:60px;
+	opacity:1;
+	border-radius:50%;
+}
+
+
+div.testdrive{
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-image:url("fordm.jpg");
+	width:100%;
+	margin-top:40px;
+	text-align:center;
+	height:100%;
+	box-shadow:0 4px 8px 0 rgba(0,0,0,2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.testdrive h1{
+	font-family:arial;
+	font-size:50px;
+	color:black;
+	padding:1px;
+}
+.testdrive p{
+	font-family:arial;
+	font-size:30px;
+	color:black;
+	padding:1px;
+}
+div.Gallery{
+	box-shadow:0 4px 8px 0 rgba(0,0,0,2),0 6px 20px 0 rgba(0,0,0,0.19);
+	margin-top:60px;
+	width:100%;
+	background-size:cover;
+	height:auto;
+	background:linear-gradient(to top left,#3a1c71,#000);
+}
+.Gallery h1{
+	color:white;
+	text-align:center;
+	padding-top:50px;
+}
+.parent {
+    width: 30%;
+    margin: 20px;
+    height: 27%;
+    overflow: hidden;
+    float: left;
+    
+}
+
+.child {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+.parent:hover .child, .parent:focus .child {
+   
+    transform: scale(1.2);
+}
+
+
+
+.bg-one {background-image: url(9.jpg);}
+.bg-two {background-image: url(8.jpg);}
+.bg-three {background-image: url(7.jpg);}
+.bg-four {background-image: url(6.jpg);}
+.bg-five {background-image: url(5.jpg);}
+.bg-six {background-image: url(4.jpg);}
+.bg-seven {background-image: url(3.jpg);}
+.bg-ei {background-image: url(2.jpg);}
+.bg-nine {background-image: url(1.jpg);}
+
+
+div.Team{
+	box-shadow:0 4px 8px 0 rgba(0,0,0,2),0 6px 20px 0 rgba(0,0,0,0.19);
+	margin-top:40px;
+	width:auto;
+	background-size:cover;
+	height:auto;
+	background:linear-gradient(to top left,#3a1c71,#ffaf7b);
+	
+}
+
+.Team p{
+	font-family:arial;
+	padding-top:10px;
+	font-size:50px;
+	text-align:center;
+}	
+.Team h2{
+	text-align:center;
+	font-size:30px;
+	font-family:arial;
+}	
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.column2 {
+    float: left;
+    width: 30%;
+    padding:0 60px 0 60px ;
+}
+.column3 {
+    float: right;
+    width: 30%;
+    padding:0 60px 0 60px ;
+}
+
+.column1 {
+    float: left;
+    width: 25%;
+    padding: 50px;
+}
+
+div.desc {
+    padding: 15px;
+	font-size:30px;
+    text-align: center;
+}
+
+
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+div.Contact{
+	box-shadow:0 4px 8px 0 rgba(0,0,0,2),0 6px 20px 0 rgba(0,0,0,0.19);
+	margin-top:40px;
+	background-image:url("ford.jpg");
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.Contact h1{
+	color:white;
+	padding:14px 16px;
+	font-family:garamond;
+	font-size:80px;
+	text-align:center;
+}
+
+.Contact h2{
+	color:white;
+	font-family:garamond;
+	padding:14px 16px;
+	font-size:30px;
+	text-align:center;
+}
+
+.mail{
+	color:black;
+	border-radius:10px;
+	text-align:center;
+	width:100%;
+	float:left;
+	
+}
+
+.Contact:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+input{
+	border-radius:5px;
+	width:30%;
+	padding:10px;
+	margin:20px;
+}
+
+.form-control{
+	border-radius:5px;
+	width:30%;
+	padding:10px;
+	margin:20px;
+	
+	
+}
+
+.submit{
+	background-color:black;
+	color:white;
+	font-family:verdana;
+	border-color:white;
+	border-radius:30px;
+	font-size:20px;
+	padding:10px;
+}
+
+.submit:hover{
+	background-color:white;
+	color:black;
+}
+
+
+p{
+	font-family:Arial;
+}
+
+form{
+	margin-left:20px;
+	font-size:120%
+}
