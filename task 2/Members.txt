@@ -1,3 +1,10 @@
 Internship - Web Development Task 2 Members:
 Arjun G
 Akarsh Ashok
+
+
+Good job on the navigation bar and the single page view.
+Color theme should be imporved. Use white color more and scale the images.
+Use a good font instead of stock fonts.
+Scale the potrait images to reduce size and give give card effect or animations.
+Use a good looking back-to-top button. A vetor image is prefered.
