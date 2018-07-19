@@ -1,21 +1,65 @@
 <html>
 <head>
   <title>Application form</title>
-    <link rel="stylesheet" type="text/css" href="css/formstyle.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" type="text/css" href="css/formstyle.css">
+
     <link rel="shortcut icon" href="images/Avengers-logo.ico" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-<body bgcolor="#e0e0e0">
+<body bgcolor="#e0e0e0" id=myPage>
+  <nav class="navbar-inverse navbar-fixed-top">
+  	<div class="container-fluid">
+  		<div class="navbar-header">
+  			<a class="navbar-brand" href="index.html" data-toggle="tooltip" title="HOME">
+  				<img src="images/AvengersInitiativeLogo.png" alt="Smiley face">
+  			</a>
+  		</div>
+  		<div class="nav navbar-nav navbar-right">
+  		<ul class="nav navbar-nav">
+  			<li class="dropdown active">
+  			  <a class="dropdown-toggle" data-toggle="dropdown"
+  				href="#">RECRUITMENT<span class="glyphicon glyphicon-industry"></span></a>
+  			  <ul class="dropdown-menu">
+  				<a href="form.html">Apply Now</a>
+  				<a href="appstatus.html">Check application status</a>
+  			  </ul>
+  			</li>
+
+  			<li class="dropdown">
+  				<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" href="#">
+  					<span class="glyphicon glyphicon-intern"></span>INTERNSHIPS</a>
+  				<ul class="dropdown-menu">
+  					<a href="internform.html">Apply</a>
+  					<a href="tandc.html">Terms & Conditions</a>
+  				</ul>
+  			</li>
+
+  			<li class="dropdown">
+  				<a href="industrialvisit.html"><span class="glyphicon glyphicon-industry"></span>INDUSTRIAL VISITS</a>
+  			</li>
+
+  			<li class="dropdown">
+  				<a href="About.html"><span class="glyphicon glyphicon-credit"></span>CREATORS</a>
+  			</li>
+  		</ul>
+  		</div>
+  	</div>
+  </nav>
+  <br><br><br><br><br>
+
 
 
       <div id=formhead align=left>
-          <img src="images/Avengers-logowhite.png" height=75 width=70 align=left>
           <h1>Apply to become an AVENGER right now!!</h1>
           <hr>
-          <a href="index.html" class=button>Home</a><br><br>
         </div>
 
-  <section align=center id=formbody>
+  <section align=center class="well well-sm">
     <div align=left id=form>
       <form action="action_page.html" method="get">
       <font size=2><br>
@@ -24,12 +68,18 @@
       </div>
       <b>
         <font size=3>
+
+      <div class=col-xs-10>
         <label for=fname>FULL NAME:</label> <br>
-        <input type="text" id=fname name="fname" required ><br><br>
+        <input type="text" class=form-control name="fname" required placeholder="Enter your fullname" ><br>
+      </div>
+      <div class=col-xs-10>
         <label for=sname>SUPERHERO NAME:</label><br>
-        <input tye=text id=sname name=snmame required><br><br>
+        <input tye=text class=form-control name=snmame required placeholder="Enter SUPERHERO NAME of your wish "><br>
+      </div>
+      <div class=form-group>
         <label for=country>COUNTRY &nbsp;:</label>
-                          <select id=country name=country>
+                          <select class=form-control id=country name=country>
                           <option value="Argentina" >Argentina</option><br><br>
                           <option value="Australia" >Australia</option><br>
                           <option value="Austria" >Austria</option><br>
@@ -61,12 +111,22 @@
                           <option value="Singapore" >Singapore</option><br>
                           <option value="Spain" >Spain</option><br>
                           <option value="Switzerland" >Switzerland</option><br>
-</select><br><br>
-
-  GENDER:<br><label><input type=radio name=gender checked required >Male</label><br>
-            <label><input name=gender type=radio required >Female</label><br>
-            <label><input name=gender type=radio required >Transgender</label><br><br>
-  SKILLS/ABILITES:(check all that apply)<br>
+                        </select><br>
+      </div>
+      <div class=form-group>
+          GENDER:<br>
+          <div class="radio">
+            <label><input type=radio name=gender checked required >Male</label>
+          </div>
+          <div class="radio">
+            <label><input name=gender type=radio required >Female</label>
+          </div>
+          <div class="radio">
+            <label><input name=gender type=radio required >Transgender</label>
+          </div>
+      </div>
+      <div class=form-group>
+                    SKILLS/ABILITES:(check all that apply)<br>
                     <input type=checkbox id=flying name=field><label for=flying>FLYING</label><br>
                     <input type=checkbox id=swimming name=field ><label for=swimming>SWIMMING</label><br>
                     <input type=checkbox id="inskill" name=field><label for=inskill>INSTANT KILL</label><br>
@@ -75,8 +135,11 @@
                     <input type=checkbox id=firepower name=field ><label for=firepower>FIREPOWER</label><br>
                     <input type=checkbox id=mpower name=field ><label for=mpower>MYSTIC POWER</label><br>
                     <input type=checkbox id=others name=field><label for=others1>OTHERS(specify)</label><br>
-                    <br><textarea rows="4" cols="50" name=otherabilities id=others1></textarea><br><br>
-    FAVORITE AVENGER:<select name="superhero" >
+                    <br>
+                      <textarea  class=form-control rows="4" cols="50" name=otherabilities id=others1 placeholder="Other skills you posess" ></textarea>
+      </div><br>
+      <div class=form-group>
+        FAVORITE AVENGER:<select name="superhero" class=form-control>
                 <option value="HULK" selected>HULK</option>
                 <option value="IRON MAN">IRON MAN</option>
                 <option value="CAPTAIN AMERICA">CAPTAIN AMERICA</option>
@@ -88,22 +151,48 @@
                 <option value="DR.STRANGE">DR.STRANGE</option>
                 <option value="NICK FURY">NICK FURY</option>
               </select><br>
-        <br><p><input type=checkbox name=finalagree required id=agree><label for=agree>I agree to all <a href="tandc.html">terms and conditions</a> of the AVENGERS initiative and obliged to follow it irrespective of its frequent updations.</label></p>
-        <br><input type="submit" value="Submit" class=sbutton>
-        <input type=reset value=Reset class=sbutton>
+      </div>
+      <div class=form-group>
+        <br><p><label for=agree><input type=checkbox name=finalagree required id=agree>
+                I agree to all <a href="tandc.html" target="_blank">terms and conditions</a> of the AVENGERS initiative and obliged to follow it irrespective of its frequent updations.</label></p>
+      </div>
+      <div class=form-group>
+        <br><input type="submit" value="Submit" class="btn btn-success">
+        <input type=reset value=Reset class="btn btn-danger">
+      </div>
     </form>
   </div>
 </section>
-<br><br>
-<a href="index.html" class=button><< Go back</a>
+<br><br><br><br>
+<div style="background-color:#212121" align=center id=footer>
+  <hr>
+  <footer class="text-center">
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br>
+    <font size=4>
 
-<br><br><br><br><br><br>
-<div style="background-color:#bdbdbd" align=center id=footer>
-  <font size=4>
-    <hr>
-    2018 MARVEL Avengers Initiative&reg;<br>
-    &copy;&nbsp;All rights reserved.
+  2018 MARVEL Avengers Initiative&reg;<br>
+  &copy;All rights reserved.
 </div>
+</footer>
+<script>
+$(document).ready(function(){
+
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+})
+</script>
 </div>
 
 </body>

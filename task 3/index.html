@@ -13,28 +13,28 @@
 	<title>The Avengers Initiative</title>
 </head>
 
-<body>
+<body id=myPage>
 
 
 <nav class="navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="index.html" data-toggle="tooltip" title="HOME">
 				<img src="images/AvengersInitiativeLogo.png" alt="Smiley face">
 			</a>
 		</div>
-		
+
 		<div class="nav navbar-nav navbar-right">
 		<ul class="nav navbar-nav">
 			<li class="dropdown">
-			  <a class="dropdown-toggle" data-toggle="dropdown" 
+			  <a class="dropdown-toggle" data-toggle="dropdown"
 				href="#">RECRUITMENT<span class="glyphicon glyphicon-industry"></span></a>
 			  <ul class="dropdown-menu">
 				<a href="form.html">Apply Now</a>
 				<a href="appstatus.html">Check application status</a>
 			  </ul>
 			</li>
-			
+
 			<li class="dropdown">
 				<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" href="#">
 					<span class="glyphicon glyphicon-intern"></span>INTERNSHIPS</a>
@@ -43,17 +43,17 @@
 					<a href="tandc.html">Terms & Conditions</a>
 				</ul>
 			</li>
-			
+
 			<li class="dropdown">
 				<a href="industrialvisit.html"><span class="glyphicon glyphicon-industry"></span>INDUSTRIAL VISITS</a>
 			</li>
-				
+
 			<li class="dropdown">
 				<a href="About.html"><span class="glyphicon glyphicon-credit"></span>CREATORS</a>
 			</li>
 		</ul>
 		</div>
-	</div>	
+	</div>
 </nav>
 
 <div class="back">
@@ -61,7 +61,7 @@
 	<img src="images/avengersposter.jpg" class="image" alt="Welcome to Avengers">
 		<div class="textpos"><h1>WELCOME TO <br/><br/><b style="color:green">AVENGERS</b><br/><br/></h1>
 			<h2>BE PREPARED FOR SOME EXTRAORDINARY THINGS IN YOUR LIFE WITH US</h2>
-			<h3>The Avengers Initiative is a secret project formed by S.H.I.E.L.D. that assemble the Avengers,<br/> 
+			<h3>The Avengers Initiative is a secret project formed by S.H.I.E.L.D. that assemble the Avengers,<br/>
 			a group of the most powerful individuals,<br> to defend Earth from imminent global threats.</h3>
 		</div>
 	</div>
@@ -106,20 +106,37 @@
 	</div>
 
 </div>
+<hr>
+<br/><br/>
+<div class="container-fluid">
+	<h1 style="text-align:center;font-size:50px;">TRAILERS</h1>
+</div>
 
-<br><br><br><br><br><br>
+<br/><br/>
+<div class="row">
+	<div class="column">
+		<iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/6ZfuNTqbHE8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+	<div class="column">
+	<iframe class="frame" width="560" height="315" src="https://www.youtube.com/embed/UUkn-enk2RU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+</div>
 <hr>
 
 
-<div style="background-color:#bdbdbd;bottom:0px;" align=center id=footer>
-    <div class="row">	
+<div style="background-color:#212121;bottom:0px;" align=center id=footer>
+	<footer class="text-center">
+		<a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a><br><br>
+		<div class="row">
 		<img src="images/1.png" width="35" height="35">
 		<div class="container"><br/>
 			<p>Available from 9 am-8 pm</p>
 			<h3 class="sp">+5486 5466978</h3>
 		</div>
 	</div>
-		
+
 	<div class="row">
 		<img src="images/2.png" width="35" height="35">
 		<div class="container">
@@ -127,13 +144,35 @@
 			<h3 class="sp">avengers@info.com</h3>
 		</div>
 	</div>
+	<hr>
 
-	
 	<font size=4>
-  
-  <p>2018 MARVEL Avengers Initiative&reg;<br>
-  &copy;&nbsp;All rights reserved.</p>
-	  
+
+
+
+				<font size=4>
+
+			2018 MARVEL Avengers Initiative&reg;<br>
+			&copy;All rights reserved.
+		</div>
+		</footer>
+		<script>
+		$(document).ready(function(){
+
+			$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+						if (this.hash !== "") {
+							event.preventDefault();
+							var hash = this.hash;
+							$('html, body').animate({
+								scrollTop: $(hash).offset().top
+							}, 900, function(){
+						window.location.hash = hash;
+					});
+				}
+			});
+		})
+		</script>
 </div>
 
 

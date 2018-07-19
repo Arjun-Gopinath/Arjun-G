@@ -1,28 +1,94 @@
 <html>
 <head>
   <title>Thank You</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" type="text/css" href="css/formstyle.css">
   <link rel="shortcut icon" href="images/Avengers-logo.ico" type="image/ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body align="center" bgcolor="#e0e0e0" id=action>
+  <nav class="navbar-inverse navbar-fixed-top">
+  	<div class="container-fluid">
+  		<div class="navbar-header">
+  			<a class="navbar-brand" href="index.html" data-toggle="tooltip" title="HOME">
+  				<img src="images/AvengersInitiativeLogo.png" alt="Smiley face">
+  			</a>
+  		</div>
+
+  		<div class="nav navbar-nav navbar-right">
+  		<ul class="nav navbar-nav">
+  			<li class="dropdown">
+  			  <a class="dropdown-toggle" data-toggle="dropdown"
+  				href="#">RECRUITMENT<span class="glyphicon glyphicon-industry"></span></a>
+  			  <ul class="dropdown-menu">
+  				<a href="form.html">Apply Now</a>
+  				<a href="appstatus.html">Check application status</a>
+  			  </ul>
+  			</li>
+
+  			<li class="dropdown">
+  				<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" href="#">
+  					<span class="glyphicon glyphicon-intern"></span>INTERNSHIPS</a>
+  				<ul class="dropdown-menu">
+  					<a href="internform.html">Apply</a>
+  					<a href="tandc.html">Terms & Conditions</a>
+  				</ul>
+  			</li>
+
+  			<li class="dropdown">
+  				<a href="industrialvisit.html"><span class="glyphicon glyphicon-industry"></span>INDUSTRIAL VISITS</a>
+  			</li>
+
+  			<li class="dropdown">
+  				<a href="About.html"><span class="glyphicon glyphicon-credit"></span>CREATORS</a>
+  			</li>
+  		</ul>
+  		</div>
+  	</div>
+  </nav>
+  <br><br><br><br><br><br>
   <p><font  >
     Your Application Form for INDUSTRIAL VISIT has been succesfully uploaded.
     <br>More details will be sent to your gmail address<br>
     <font size=3>Your form is being processed by higher authorities
       <br></p>
-      <A href="industrialvisit.html" class=button>APPLY ANOTHER FORM</A>
+      <A href="industrialvisit.html" class="btn btn-success">APPLY ANOTHER FORM</A>
     </font>
   </font>
   <br><br><br><br><br><br>
-  <a href="index.html" class=button>Go Home</a>
-  <br><br><br><br><br><br>
-  <div style="background-color:#bdbdbd" align=center id=footer class=footer>
-    <font size=4>
-      <hr>
-      2018 MARVEL Avengers Initiative&reg;<br>
-      &copy;&nbsp;All rights reserved.
+  <div style="background-color:#212121" align=center id=footer>
+    <hr>
+    <footer class="text-center">
+      <a class="up-arrow" href="#action" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a><br>
+      <font size=4>
+
+    2018 MARVEL Avengers Initiative&reg;<br>
+    &copy;All rights reserved.
   </div>
+  </footer>
+  <script>
+  $(document).ready(function(){
+
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 900, function(){
+          window.location.hash = hash;
+        });
+      }
+    });
+  })
+  </script>
   </div>
 
 </body>

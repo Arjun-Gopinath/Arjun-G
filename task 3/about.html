@@ -1,22 +1,61 @@
 <html>
 <head>
   <title>Creators </title>
-  <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-  <script src="js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" type="text/css" href="css/formstyle.css">
   <link rel="shortcut icon" href="images/Avengers-logo.ico" type="image/ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <body bgcolor="#e0e0e0" align=center>
+  <body bgcolor="#e0e0e0" align=center id=myPage>
 
 
 
-    <img src="images/Avengers-logo.png" align=left height=100 width=100>
-    <img src="images/avengersabout.png" height=150 width=450><br><hr color=dark>
+
+    <br><hr color=dark>
     <br><br><div align=left>
-      <button class=button><a href="index.html" class=button>Home</a></button><br>
+      <nav class="navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html" data-toggle="tooltip" title="HOME">
+              <img src="images/avengersabout.png" height=150 width=600>
+            </a>
+          </div>
 
+          <div class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown"
+              href="#">RECRUITMENT<span class="glyphicon glyphicon-industry"></span></a>
+              <ul class="dropdown-menu">
+              <a href="form.html">Apply Now</a>
+              <a href="appstatus.html">Check application status</a>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="glyphicon glyphicon-intern"></span>INTERNSHIPS</a>
+              <ul class="dropdown-menu">
+                <a href="internform.html">Apply</a>
+                <a href="tandc.html">Terms & Conditions</a>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="industrialvisit.html"><span class="glyphicon glyphicon-industry"></span>INDUSTRIAL VISITS</a>
+            </li>
+
+            <li class="dropdown active">
+              <a href="About.html"><span class="glyphicon glyphicon-credit"></span>CREATORS</a>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </nav><br>
 
 
 
@@ -96,14 +135,36 @@
 <br><br><br><br><br><br><br>
 <div align=left>
 
-<br>
-<a href="index.html" class=button><< Go back</a><br><br>
-<div style="background-color:#bdbdbd" align=center id=footer>
-  <font size=4>
-    <hr>
-    2018 MARVEL Avengers Initiative&reg;<br>
-    &copy;&nbsp;All rights reserved.
+<br><br>
+<div style="background-color:#212121" align=center id=footer>
+  <hr>
+  <footer class="text-center">
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br>
+    <font size=4>
+
+  2018 MARVEL Avengers Initiative&reg;<br>
+  &copy;All rights reserved.
 </div>
+</footer>
+<script>
+$(document).ready(function(){
+
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+})
+</script>
 
   </body>
   </html>
